@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
 import Input from '../src/components/Input';
 import db from '../db.json';
@@ -10,7 +10,6 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 import Button from '../src/components/Button';
-
 
 /* const BackgroundImage = styled.div`
     background-image: url(${db.bg});
@@ -47,8 +46,9 @@ export default function Home() {
 
             <form onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
-              router.push(`/quiz?name=${name}`)}
-            }>
+              router.push(`/quiz?name=${name}`);
+            }}
+            >
               <Input
                 name="nomeDoUsuario"
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
