@@ -43,7 +43,12 @@ export default function Home() {
             <h1>The Legend Of Nerd</h1>
           </Widget.Header>
           <Widget.Content>
-
+            <p>Olá, {`${name}`}</p>
+            <p>Bem-vindo ao jogo do nedquiz, onde você irá 
+              descotrir qual o seu nivel sobre o conhecimento do mundo 
+              nerd referente a filmes, series e outras coisa nerd.<br/><br/>
+              Vamos lá? Basta colocar seu nome para poder jogar
+              </p>
             <form onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
@@ -55,7 +60,7 @@ export default function Home() {
                 placeholder="Seu nome"
                 value={name}
               />
-              <Button type="submit" disabled={name.length === 0}>{`Jogar agora ${name}`}</Button>
+              <Button type="submit" disabled={name.length === 0}>Jogar Agora</Button>
             </form>
           </Widget.Content>
         </Widget>
